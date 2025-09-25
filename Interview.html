@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Interview System</title>
+    <link rel="stylesheet" href="Interview.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Mock Interview System</h1>
+        <div id="category-selection">
+            <h3>Select Interview Category</h3>
+            <button onclick="startInterview('Technical')">Technical</button>
+            <button onclick="startInterview('HR')">HR</button>
+            <button onclick="startInterview('Behavioral')">Behavioral</button>
+        </div>
+
+        <div id="interview-section" class="hidden">
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <textarea id="answer" placeholder="Type your answer here..." rows="4"></textarea>
+                <p id="timer">Time Left: 180s</p>
+                <button onclick="submitAnswer()">Submit Answer</button>
+            </div>
+            <div id="feedback-container" class="hidden">
+                <h3>Feedback:</h3>
+                <p id="feedback"></p>
+                <button onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <h2>Interview Complete!</h2>
+            <p id="score">Your Score: </p>
+        </div>
+    </div>
+
+    <script src="Interview.js"></script>
+</body>
+</html>
